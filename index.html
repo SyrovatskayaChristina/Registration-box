@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title> Форма для ввода персональных данных</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="Guriddo/css/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="Guriddo/css/ui.jqgrid.css" />
+    <script type="text/ecmascript" src="Guriddo/js/jquery.min.js"></script>
+    <script type="text/ecmascript" src="Guriddo/js/grid.locale-en.js"></script>
+    <script type="text/ecmascript" src="Guriddo/js/jquery.jqGrid.min.js"></script>
+
+
+
+</head>
+
+
+<body>
+    <form id="form">
+        <div class="registration-box border w-25 p-3 rounded">
+
+            <div class="form-group">
+                <h4>
+                    Впервые с нами!
+                </h4>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="username" placeholder="Введите имя" onchange="checkName()">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="userlastname" placeholder="Введите фамилию" onchange="checkLastName()">
+            </div>
+            Дата рождения
+            <br>
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" class="form-control text-center inline" id="bdday" placeholder="День" onchange="checkBdDay()">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control text-center inline" id="bdmonth" placeholder="Месяц" onchange="checkBdMonth()">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control text-center inline" id="bdyear" placeholder="Год" onchange="checkBdYear()">
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <select class="form-control" id="city">
+                      <option disabled selected>Выберите город</option>
+                      <option>Санкт-Петербург</option>
+                      <option>Москва</option>
+                      <option>Тула</option>
+                      <option>Самара</option>
+                    </select>
+            </div>
+            <button class="btn btn-success btn-block" id="regBtn" name="regBtn" type="submit">Отправить</button>
+            <div id="message"></div>
+        </div>
+    </form>
+    <div class="table">
+        <table id="jqGrid" name="jqGrid">
+        </table>
+    </div>
+
+
+    <script src="script.js"></script>
+
+    <script src="event.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
